@@ -18,8 +18,8 @@ public class Acclogin {
 	private String Address;
 	private String Contact;
 	private String Email;
-	private String Username;
-	private String Password;
+	private static String Username;
+	private static String Password;
 	private String CPassword;
 	public String getFname() {
 		return Fname;

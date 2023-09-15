@@ -3,13 +3,111 @@
 <html xmlns="http://www.w3.org/1999/xhtml" 
 xmlns:h="http://xmlns.jcp.org/jsf/html">
 	<h:head>
-		<title>Home</title>
-		<link rel="stylesheet" href="css/index.css" />
+		<title>Home profile</title>
+		
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"/>
+    <style>* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    top: 50%;
+    left: 50%;
+    position: absolute;
+    transform: translate(-50%, -50%);
+}
+
+.container {
+    height: 550px;
+    width: 300px;
+    box-shadow: 0 10px 20px black;
+    background-size: cover;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    overflow: hidden;
+    font-family: 'Abel', sans-serif;
+}
+
+.image {
+    height: 100px;
+    width: 100px;
+    background-image: url('https://xp.io/storage/15pewlWA.jpg');
+    background-size: cover;
+    border-radius: 50%;
+    border: 8px solid white;
+    position: relative;
+    top: 200px;
+    margin-left: 170px;
+    box-shadow: 0 2px 15px rgb(58, 54, 54);
+    transform: rotate(-20deg);
+}
+
+.shape {
+    height: 250px;
+    width: 400px;
+    background-color: black;
+    margin-left: -20px;
+    position: relative;
+    top: -80px;
+    box-shadow: 0 2px 15px black;
+    transform: rotate(25deg);
+}
+
+h3 {
+    margin-bottom: 10px;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.title {
+    color: rgb(105, 100, 109);
+}
+
+p {
+    padding-left: 30px;
+    padding-right: 30px;
+    color: rgb(105, 100, 109);
+}
+
+.icons {
+    margin-top: 15px;
+}
+
+.icons i {
+    margin-left: 10px;
+    font-size: 20px;
+    transition: 0.3s;
+    color: rgb(40, 163, 194);
+    ;
+}
+
+.icons i:hover {
+    transform: scale(1.1);
+    color: rgb(18, 192, 235);
+}</style>
 	</h:head>
 	<h:body>
 	
-		<h1>HEWROOOO</h1> 
-		<h1>#{acc.username}</h1>
+		 <div class="container">
+        <div class="shape">
+            <div class="image"></div>
+        </div>
+        <h3>#{Acclogin.username}</h3>
+        <h3 class="title">Web Designer</h3>
+        <p>FIrst name : #{Acclogin.fname}</p>
+        <p>Last name : #{Acclogin.lname}</p>
+        <p>DOB : #{Acclogin.dob}</p>
+        <p>Gender : #{Acclogin.gender}</p>
+        <div class="icons">
+            <i class="fa fa-facebook" aria-hidden="true"/>
+            <i class="fa fa-instagram" aria-hidden="true"/>
+            <i class="fa fa-pinterest-p" aria-hidden="true"/>
+            <i class="fa fa-twitter" aria-hidden="true"/>
+        </div>
+        <a href="loginhome.xhtml"><button>Logout</button></a>
+    </div>
 		
 	</h:body>
 	

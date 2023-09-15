@@ -33,9 +33,7 @@ public class Account {
 	
 	public String login() {
 		Acclogin lg = new Acclogin();
-		String User = lg.getUsername();
-		String Pass = lg.getPassword();
-		if(username.equals(User) && password.equals(Pass)) {
+		if(lg.getUsername().equals(username) && lg.getPassword().equals(password)) {
 			return "home";
 		}
 		return "wrong";
